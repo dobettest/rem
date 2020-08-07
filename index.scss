@@ -1,0 +1,97 @@
+@function px2rem($px){
+  $rem:37.5px;
+  @return ($px / $rem)+rem;
+}
+html{
+  background-color: #f8f8f8;
+}
+.header{
+  box-sizing: border-box;
+  height:px2rem(40px);
+  width: 100%;
+  background-color:red;
+  padding-left: px2rem(23px);
+    .header-item{
+      float: left;
+      color: #ffcdce;
+      font-size: px2rem(16px);
+      margin-right: px2rem(20px);
+      line-height: px2rem(40px);
+      &:nth-child(2){
+        color:#fff;
+        font-size: px2rem(17px);
+      }
+    }
+}
+.banner{
+  position: relative;
+  .banner-content{
+    display: block;
+    height: px2rem(190px);
+    width: 100%;
+  }
+  .banner-title{
+    color:#fff;
+    position: absolute;
+    font-size: px2rem(16px);
+    left: px2rem(15px);
+    bottom:px2rem(15px);
+  }
+}
+.news{
+  .news-content{
+    .news-item{
+      height: px2rem(90px);
+      width: 100%;
+      padding-left: px2rem(15px);
+      padding-right: px2rem(15px);
+      box-sizing: border-box;
+      .inner-item{
+        overflow: hidden;
+        height: 100%;
+        border-bottom: 1px solid #e5e5e5;
+        position: relative;
+        .item-img{
+          margin-top: px2rem(10px);
+          margin-right: px2rem(15px);
+          float: left;
+          display: block;
+          width: px2rem(95px);
+          height: px2rem(70px);
+        }
+        .item-title{
+          margin-top: px2rem(16px);
+          color:#404040;
+          font-size: px2rem(17px);
+          line-height: px2rem(20px);
+        }
+        .item-time{
+          font-size: px2rem(12px);
+          color: #888;
+          position: absolute;
+          left: px2rem(107px);
+          bottom: px2rem(17px);
+        }
+        .item-num{
+          color:#888;
+          font-size:px2rem(12px);
+          position: absolute;
+          right: px2rem(4px);
+          bottom: px2rem(17px);
+          &::before{
+            display: block;
+            position: absolute;
+            left: px2rem(-23px);
+            top: px2rem(-3px);
+            content: "";
+            width: px2rem(21px);
+            height: px2rem(20px);
+            background-size: contain;
+            background-image: url("./images/num.jpg");
+          }
+        }
+
+      }
+    }
+  }
+}
