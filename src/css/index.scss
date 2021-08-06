@@ -1,3 +1,4 @@
+@import "./reset.css";
 @function px2rem($px){
   $rem:37.5px;
   @return ($px / $rem)+rem;
@@ -87,7 +88,7 @@ html{
             width: px2rem(21px);
             height: px2rem(20px);
             background-size: contain;
-            background-image: url("./images/num.jpg");
+            background-image: url("../assets/images/num.jpg");
           }
         }
 
